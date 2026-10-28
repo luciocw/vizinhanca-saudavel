@@ -159,7 +159,7 @@ p {
   justify-content: space-between;
   gap: 12px;
   padding: calc(env(safe-area-inset-top) + 10px) 16px 10px;
-  background: color-mix(in srgb, var(--bg) 96%, transparent);
+  background: var(--bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);

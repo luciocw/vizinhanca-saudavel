@@ -3,12 +3,12 @@ import L from 'leaflet'
 import { CircleMarker, MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
 import { Icon } from '../components/Icon'
 import { PageHead } from '../components/PageHead'
-import { categoryMeta, mapCenter, places } from '../content/lugares'
+import { categoryMeta, mapCenter, mapInsight, places } from '../content/lugares'
 import { cssVars } from '../lib/css'
 import { haversine, placeUrl, type LatLng } from '../lib/geo'
 import type { Place, PlaceCategory } from '../types'
 
-const categories: readonly PlaceCategory[] = ['verde', 'pracinha', 'academia', 'saude', 'feira']
+const categories: readonly PlaceCategory[] = ['verde', 'pracinha', 'saude', 'feira', 'comunidade']
 
 const pinCache = new Map<string, L.DivIcon>()
 
@@ -28,12 +28,11 @@ const pinFor = (cat: PlaceCategory, active: boolean): L.DivIcon => {
   return icon
 }
 
-/** um lugar pode aparecer em mais de um filtro (praça com brinquedos e academia) */
+/** uma praça com brinquedos também aparece no filtro de pracinhas */
 const matches = (p: Place, filter: PlaceCategory | 'todos'): boolean =>
   filter === 'todos' ||
   p.category === filter ||
-  (filter === 'pracinha' && p.features.some((f) => f.toLowerCase().includes('brinquedo'))) ||
-  (filter === 'academia' && p.features.some((f) => f.toLowerCase().includes('academia')))
+  (filter === 'pracinha' && p.features.some((f) => f.toLowerCase().includes('brinquedo')))
 
 const FlyTo = ({ target }: { readonly target: LatLng | null }) => {
   const map = useMap()
@@ -44,7 +43,7 @@ const FlyTo = ({ target }: { readonly target: LatLng | null }) => {
 }
 
 const formatDistance = (m: number): string => {
-  const minutes = Math.max(1, Math.round((m * 1.3) / 80))
+  const minutes = Math.max(1, Math.round((m * 1.2) / 80))
   return m < 1000 ? `${Math.round(m)} m · ${minutes} min a pé` : `${(m / 1000).toFixed(1).replace('.', ',')} km · ${minutes} min a pé`
 }
 
@@ -87,7 +86,7 @@ export const Mapa = () => {
   return (
     <div className="page">
       <PageHead kicker="Mapa do bairro" title="Tem praça mais perto do que tu imaginas" accent="var(--green)">
-        Áreas verdes, pracinhas para as crianças, academias ao ar livre, feiras e o posto de saúde.
+        Áreas verdes, pracinhas para as crianças, a feira, serviços de saúde e pontos de encontro do bairro.
       </PageHead>
 
       <div className="chips" role="group" aria-label="Filtrar lugares">
@@ -194,6 +193,10 @@ export const Mapa = () => {
           ))}
         </div>
       </section>
+
+      <div className="card tinted" style={cssVars({ '--tint': 'var(--copa-soft, var(--green-soft))' })}>
+        <p>{mapInsight}</p>
+      </div>
 
       <p className="footer-note">
         Viu algo desatualizado, como um brinquedo quebrado ou uma praça nova? Avisa a prefeitura pelo 156.

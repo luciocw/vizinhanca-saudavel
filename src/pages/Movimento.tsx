@@ -14,7 +14,7 @@ const tabs: readonly { readonly id: Tab; readonly label: string }[] = [
   { id: 'porque', label: 'Por que mexer' },
 ]
 
-/** distância percorrida pelas ruas: linha reta × 1,3 (fator de quadra) */
+/** distância percorrida pelas ruas: linha reta × 1,2 (fator de quadra) */
 const routeKm = (r: WalkRoute): number => {
   let total = 0
   for (let i = 1; i < r.stops.length; i++) {
@@ -22,7 +22,7 @@ const routeKm = (r: WalkRoute): number => {
     const b = r.stops[i]
     if (a !== undefined && b !== undefined) total += haversine(a, b)
   }
-  return (total * 1.3) / 1000
+  return (total * 1.2) / 1000
 }
 
 const RouteCard = ({ route }: { readonly route: WalkRoute }) => {

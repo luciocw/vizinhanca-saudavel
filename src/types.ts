@@ -1,4 +1,4 @@
-export type PlaceCategory = 'verde' | 'pracinha' | 'academia' | 'saude' | 'feira'
+export type PlaceCategory = 'verde' | 'pracinha' | 'saude' | 'feira' | 'comunidade'
 
 export interface Place {
   readonly id: string
