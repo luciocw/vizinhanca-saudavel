@@ -3,7 +3,7 @@ import type { Stretch, Tip } from '../types'
 export const activityFacts: readonly Tip[] = [
   {
     title: 'Quanto é o suficiente?',
-    body: 'O Guia de Atividade Física do Ministério da Saúde recomenda que adultos façam pelo menos 150 minutos de atividade moderada por semana. Dá uns 30 minutos, cinco dias por semana. Uma caminhada em que tu consegues conversar, mas não cantar, já conta como moderada.',
+    body: 'O Guia de Atividade Física do Ministério da Saúde recomenda que adultos façam pelo menos 150 minutos de atividade moderada por semana. Dá uns 30 minutos, cinco dias por semana. Uma caminhada em que tu consegue conversar, mas não cantar, já conta como moderada.',
   },
   {
     title: 'Criança precisa de mais',
@@ -15,7 +15,7 @@ export const activityFacts: readonly Tip[] = [
   },
   {
     title: 'Menos tempo sentado',
-    body: 'Se tu trabalhas sentado, levanta a cada hora para dar uma volta, beber água ou subir um lance de escada. Usar a escada do prédio em vez do elevador também conta.',
+    body: 'Se tu trabalha sentado, levanta a cada hora para dar uma volta, beber água ou subir um lance de escada. Usar a escada do prédio em vez do elevador também conta.',
   },
 ]
 

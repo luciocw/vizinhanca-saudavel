@@ -75,7 +75,7 @@ const BreathTool = () => {
       <p className="small">{pattern.description}</p>
       <p className="breath-phase" aria-live="polite">
         {state.done
-          ? 'Pronto. Como tu estás agora?'
+          ? 'Pronto. Como tu tá agora?'
           : state.running && phase !== undefined
             ? phase.label
             : 'Senta confortável e aperta começar'}

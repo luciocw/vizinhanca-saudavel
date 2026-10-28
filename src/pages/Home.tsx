@@ -118,7 +118,7 @@ export const Home = () => {
             <Icon name="heart" />
           </span>
           <span>
-            <strong style={{ display: 'block', color: 'var(--ink)' }}>Conecta-te ao bairro</strong>
+            <strong style={{ display: 'block', color: 'var(--ink)' }}>Te conecta com o bairro</strong>
             Posto de saúde, telefones úteis e como juntar os vizinhos
           </span>
         </button>

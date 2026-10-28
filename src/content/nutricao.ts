@@ -14,7 +14,7 @@ export const groupInfo: Record<FoodGroup, { readonly label: string; readonly sho
   ultraprocessado: {
     label: 'Ultraprocessado',
     short: 'Melhor evitar',
-    body: 'Fórmula industrial com ingredientes que tu não terias em casa: xarope de glicose, gordura hidrogenada, aromatizante, corante, realçador de sabor. Refrigerante, biscoito recheado, salgadinho, salsicha, macarrão instantâneo.',
+    body: 'Fórmula industrial com ingredientes que tu não teria em casa: xarope de glicose, gordura hidrogenada, aromatizante, corante, realçador de sabor. Refrigerante, biscoito recheado, salgadinho, salsicha, macarrão instantâneo.',
   },
 }
 
@@ -24,7 +24,7 @@ export const foodQuiz: readonly FoodItem[] = [
   { name: 'Pão francês da padaria', group: 'processado', why: 'Farinha, água, sal e fermento. Processado, mas com ingredientes simples.' },
   { name: 'Pão de forma de pacote', group: 'ultraprocessado', why: 'Costuma levar conservantes, emulsificantes e açúcar para durar semanas.' },
   { name: 'Ovo', group: 'in-natura', why: 'Direto da galinha para a tua cozinha.' },
-  { name: 'Biscoito recheado', group: 'ultraprocessado', why: 'Gordura, açúcar, aromatizante. Feito para tu não conseguires parar de comer.' },
+  { name: 'Biscoito recheado', group: 'ultraprocessado', why: 'Gordura, açúcar, aromatizante. Feito pra tu não conseguir parar de comer.' },
   { name: 'Queijo minas', group: 'processado', why: 'Leite com sal e coalho.' },
   { name: 'Iogurte natural sem açúcar', group: 'in-natura', why: 'Leite fermentado, sem nada adicionado. Conta como minimamente processado.' },
   { name: 'Iogurte de sabor com corante', group: 'ultraprocessado', why: 'Açúcar, espessante, aroma e corante. Bem diferente do natural.' },

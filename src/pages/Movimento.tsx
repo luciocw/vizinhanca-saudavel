@@ -258,7 +258,7 @@ export const Movimento = () => {
             ))}
           </div>
           <p className="muted small">
-            Se tu tens alguma condição de saúde ou estás parado há muito tempo, conversa com a equipe do teu posto antes
+            Se tu tem alguma condição de saúde ou tá parado há muito tempo, conversa com a equipe do teu posto antes
             de aumentar o ritmo.
           </p>
         </section>

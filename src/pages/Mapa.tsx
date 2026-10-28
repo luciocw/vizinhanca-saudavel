@@ -85,7 +85,7 @@ export const Mapa = () => {
 
   return (
     <div className="page">
-      <PageHead kicker="Mapa do bairro" title="Tem praça mais perto do que tu imaginas" accent="var(--green)">
+      <PageHead kicker="Mapa do bairro" title="Tem praça mais perto do que tu imagina" accent="var(--green)">
         Áreas verdes, pracinhas para as crianças, a feira, serviços de saúde e pontos de encontro do bairro.
       </PageHead>
 

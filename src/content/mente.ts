@@ -39,7 +39,7 @@ export const breathPatterns: readonly BreathPattern[] = [
 export const mindfulPractices: readonly Tip[] = [
   {
     title: '5-4-3-2-1 para quando a ansiedade aperta',
-    body: 'Repara em 5 coisas que tu vês, 4 que consegues tocar, 3 sons, 2 cheiros e 1 gosto. Isso puxa a atenção de volta para o agora.',
+    body: 'Repara em 5 coisas que tu vê, 4 que tu consegue tocar, 3 sons, 2 cheiros e 1 gosto. Isso puxa a atenção de volta para o agora.',
   },
   {
     title: 'Caminhada com atenção',
@@ -50,7 +50,7 @@ export const mindfulPractices: readonly Tip[] = [
     body: 'De manhã, antes de olhar as mensagens, senta na cama e respira fundo dez vezes. Parece pouco, mas muda o tom do dia.',
   },
   {
-    title: 'Dá nome ao que tu sentes',
+    title: 'Dá nome ao que tu sente',
     body: '"Estou ansioso." "Estou irritado." Só dar nome à emoção já diminui a força dela. Escrever num papel ajuda mais ainda.',
   },
 ]
@@ -67,7 +67,7 @@ export const sleepTips: readonly Tip[] = [
 export const whenToSeekHelp: readonly string[] = [
   'A tristeza ou a ansiedade duram semanas e atrapalham o trabalho, os estudos ou a convivência.',
   'O sono ou o apetite mudaram muito.',
-  'Tu perdeste o interesse por coisas de que gostavas.',
-  'Estás usando álcool ou remédios para aguentar o dia.',
+  'Tu perdeu o interesse por coisas que gostava de fazer.',
+  'Tu tá usando álcool ou remédio para aguentar o dia.',
   'Aparecem pensamentos de que não vale a pena viver.',
 ]

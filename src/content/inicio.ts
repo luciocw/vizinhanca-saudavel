@@ -12,7 +12,7 @@ export const weeklyChallenge: readonly string[] = [
 
 export const dailyTips: readonly Tip[] = [
   { title: 'Leva a garrafinha', body: 'Sair de casa com água evita o refri da padaria no meio da tarde.' },
-  { title: 'Desce uma parada antes', body: 'Se tu vens de ônibus, desce uma parada antes e termina o caminho a pé.' },
+  { title: 'Desce uma parada antes', body: 'Se tu vem de ônibus, desce uma parada antes e termina o caminho a pé.' },
   { title: 'Fruta à vista', body: 'Deixa uma fruteira cheia em cima da mesa. A gente come o que vê.' },
   { title: 'Reunião caminhando', body: 'Aquela ligação de trabalho pode ser feita andando na praça.' },
   { title: 'Chimarrão com moderação', body: 'Chimarrão também tem cafeína. Depois das 16h, melhor dar uma pausa se o sono anda ruim.' },

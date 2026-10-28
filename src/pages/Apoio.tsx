@@ -6,7 +6,7 @@ import { go } from '../lib/router'
 
 export const Apoio = () => (
   <div className="page">
-    <PageHead kicker="Conecta-te ao bairro" title="Ninguém se cuida sozinho" accent="var(--sun)">
+    <PageHead kicker="Te conecta com o bairro" title="Ninguém se cuida sozinho" accent="var(--sun)">
       Onde buscar atendimento, telefones que vale ter salvos e ideias para aproximar os vizinhos.
     </PageHead>
 
