@@ -16,6 +16,14 @@ export const communityIdeas: readonly Tip[] = [
     body: 'Coloca um bilhete no elevador ou no grupo do condomínio marcando um horário fixo, tipo terça e quinta às 19h na portaria. Começa com duas pessoas, e tá ótimo.',
   },
   {
+    title: 'Caminhada por faixa de idade',
+    body: 'Uma turma de quem tem mais de 60, outra de pais com crianças, outra de quem sai cedo pro trabalho. Cada grupo no seu ritmo, com um alongamento junto antes de sair. Foi uma das ideias que os moradores deram nas entrevistas.',
+  },
+  {
+    title: 'A igreja já junta o bairro',
+    body: 'A igreja da 24 de Outubro faz almoço de domingo e campanha do agasalho. Encontros assim são uma boa porta para começar um grupo de caminhada ou uma roda de conversa.',
+  },
+  {
     title: 'Pracinha com hora marcada',
     body: 'Pais e mães do mesmo prédio podem combinar de levar as crianças juntos à praça no fim da tarde. As crianças brincam e os adultos conversam.',
   },
