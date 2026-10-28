@@ -1,12 +1,12 @@
 {
-  "name": "Auxiliadora Saudável",
-  "short_name": "Auxiliadora",
+  "name": "Vizinhança Saudável",
+  "short_name": "Vizinhança",
   "description": "Praças, caminhadas, comida de verdade e cuidado com a mente no bairro Auxiliadora.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f1f5ee",
-  "theme_color": "#1e6a48",
+  "background_color": "#f6f5ef",
+  "theme_color": "#1d2318",
   "lang": "pt-BR",
   "icons": [
     { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },

@@ -1,11 +1,13 @@
 :root {
-  /* Identidade: ruas arborizadas da Auxiliadora. Verde-copa, jacarandá, ipê, céu e tomate. */
-  --bg: #f1f5ee;
+  /* Identidade Vizinhança Saudável: amarelo de ipê sobre tinta escura. Seções: copa, céu, tomate, jacarandá, ipê. */
+  --bg: #f6f5ef;
   --surface: #ffffff;
-  --surface-2: #e4ebe0;
-  --ink: #15261d;
-  --muted: #55665b;
-  --line: #d5dfd0;
+  --surface-2: #eae8de;
+  --ink: #1d2318;
+  --muted: #5a5f52;
+  --line: #dedbcf;
+  --brand: #f2b705;
+  --brand-ink: #1d2318;
   --green: #1e6a48;
   --green-ink: #ffffff;
   --green-soft: #d8eadb;
@@ -27,12 +29,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --bg: #0f1a14;
-    --surface: #17241c;
-    --surface-2: #213128;
-    --ink: #e8f0e9;
-    --muted: #9fb2a5;
-    --line: #2a3c31;
+    --bg: #141712;
+    --surface: #1d211a;
+    --surface-2: #282d24;
+    --ink: #eeede4;
+    --muted: #aeb2a4;
+    --line: #33392d;
+    --brand: #f2c14e;
+    --brand-ink: #1d2318;
     --green: #6cc497;
     --green-ink: #0c1a12;
     --green-soft: #1b3a2a;
@@ -50,12 +54,14 @@
 }
 
 :root[data-theme='dark'] {
-  --bg: #0f1a14;
-  --surface: #17241c;
-  --surface-2: #213128;
-  --ink: #e8f0e9;
-  --muted: #9fb2a5;
-  --line: #2a3c31;
+  --bg: #141712;
+  --surface: #1d211a;
+  --surface-2: #282d24;
+  --ink: #eeede4;
+  --muted: #aeb2a4;
+  --line: #33392d;
+  --brand: #f2c14e;
+  --brand-ink: #1d2318;
   --green: #6cc497;
   --green-ink: #0c1a12;
   --green-soft: #1b3a2a;
@@ -278,7 +284,7 @@ section {
 }
 
 .bottomnav button[aria-current='page'] {
-  color: var(--green);
+  color: var(--ink);
   font-weight: 700;
 }
 
@@ -289,7 +295,7 @@ section {
   width: 28px;
   height: 3px;
   border-radius: 0 0 3px 3px;
-  background: var(--green);
+  background: var(--brand);
 }
 
 /* ---------- cartões ---------- */
@@ -334,8 +340,8 @@ section {
 /* ---------- início ---------- */
 
 .hero {
-  background: var(--green);
-  color: var(--green-ink);
+  background: var(--brand);
+  color: var(--brand-ink);
   border-radius: 24px;
   padding: 22px 20px;
   display: flex;
@@ -357,10 +363,10 @@ section {
 
 .hero svg.deco {
   position: absolute;
-  right: -26px;
-  top: -18px;
-  width: 130px;
-  opacity: 0.12;
+  right: -34px;
+  top: -30px;
+  width: 170px;
+  opacity: 0.16;
 }
 
 .tiles {
@@ -610,13 +616,13 @@ section {
   font-size: 0.95rem;
   text-decoration: none;
   cursor: pointer;
-  background: var(--green);
-  color: var(--green-ink);
+  background: var(--ink);
+  color: var(--bg);
 }
 
 .btn.ghost {
   background: transparent;
-  color: var(--green);
+  color: var(--ink);
   border: 1.5px solid currentColor;
 }
 

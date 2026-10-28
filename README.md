@@ -1,6 +1,8 @@
-# Auxiliadora Saudável
+# Vizinhança Saudável
 
-Guia digital de saúde comunitária para o bairro Auxiliadora, em Porto Alegre. Webapp pensado para celular, acessado por QR Code.
+Guia digital de saúde comunitária para o bairro Auxiliadora, em Porto Alegre.
+
+Logo, ícones e QR Code ficam em `marca/`. Webapp pensado para celular, acessado por QR Code.
 
 **No ar:** https://luciocw.github.io/auxiliadora-saudavel/
 

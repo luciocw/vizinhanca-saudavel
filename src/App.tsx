@@ -41,8 +41,8 @@ export const App = () => {
         <button type="button" className="brand" onClick={() => go('inicio')} aria-label="Ir para o início">
           <img src="./favicon.svg" alt="" />
           <span>
-            <strong>Auxiliadora Saudável</strong>
-            <small>Saúde no bairro, a pé</small>
+            <strong>Vizinhança Saudável</strong>
+            <small>Bairro Auxiliadora · Porto Alegre</small>
           </span>
         </button>
       </header>

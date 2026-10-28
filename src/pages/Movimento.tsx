@@ -195,7 +195,7 @@ export const Movimento = () => {
   return (
     <div className="page">
       <PageHead kicker="Saúde em movimento" title="Bora caminhar pelo bairro" accent="var(--sky)">
-        A Auxiliadora é plana em boa parte, arborizada e cheia de praças por perto. Dá para fazer muita coisa a pé.
+        O bairro é arborizado e tem várias praças a poucos minutos de casa. Dá para fazer muita coisa a pé.
       </PageHead>
 
       <div className="segmented" role="tablist" aria-label="Conteúdo">

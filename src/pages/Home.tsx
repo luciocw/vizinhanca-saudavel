@@ -81,12 +81,14 @@ export const Home = () => {
     <div className="page">
       <div className="hero">
         <span className="small" style={{ opacity: 0.85, fontWeight: 700 }}>
-          Bairro Auxiliadora · Porto Alegre
+          Guia de saúde do bairro
         </span>
         <h1>Cuidar da saúde começa na tua rua</h1>
         <p>Praças perto de casa, caminhadas pelo bairro, comida de verdade e um tempo para respirar.</p>
         <svg className="deco" viewBox="0 0 64 64" aria-hidden="true">
-          <path d="M32 8c-10 0-18 7.9-18 17.7C14 38.4 32 57 32 57s18-18.6 18-31.3C50 15.9 42 8 32 8z" fill="currentColor" />
+          {[0, 72, 144, 216, 288].map((a) => (
+            <path key={a} transform={`translate(32 32) rotate(${a})`} d="M0 -7.5C8.5-11 13.2-19.5 8.2-26.6C5.4-30.6-5.4-30.6-8.2-26.6C-13.2-19.5-8.5-11 0-7.5z" fill="currentColor" />
+          ))}
         </svg>
       </div>
 
