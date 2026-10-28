@@ -9,11 +9,11 @@
   --green: #1e6a48;
   --green-ink: #ffffff;
   --green-soft: #d8eadb;
-  --terra: #c8472b;
+  --terra: #b13d22;
   --terra-soft: #fbe0d6;
   --sky: #24668f;
   --sky-soft: #d6e8f3;
-  --sun: #b27800;
+  --sun: #8a5d00;
   --sun-soft: #fbeab8;
   --plum: #6a4a9e;
   --plum-soft: #e6ddf3;
@@ -153,7 +153,7 @@ p {
   justify-content: space-between;
   gap: 12px;
   padding: calc(env(safe-area-inset-top) + 10px) 16px 10px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  background: color-mix(in srgb, var(--bg) 96%, transparent);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
