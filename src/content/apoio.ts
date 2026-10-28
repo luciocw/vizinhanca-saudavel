@@ -20,8 +20,8 @@ export const communityIdeas: readonly Tip[] = [
     body: 'Uma turma de quem tem mais de 60, outra de pais com crianças, outra de quem sai cedo pro trabalho. Cada grupo no seu ritmo, com um alongamento junto antes de sair. Foi uma das ideias que os moradores deram nas entrevistas.',
   },
   {
-    title: 'A igreja já junta o bairro',
-    body: 'A igreja da 24 de Outubro faz almoço de domingo e campanha do agasalho. Encontros assim são uma boa porta para começar um grupo de caminhada ou uma roda de conversa.',
+    title: 'Onde o bairro já se encontra',
+    body: 'Tem igreja no bairro que faz almoço de domingo e campanha do agasalho. Encontros assim são uma boa porta para começar um grupo de caminhada ou uma roda de conversa.',
   },
   {
     title: 'Pracinha com hora marcada',
