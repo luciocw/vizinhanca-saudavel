@@ -2,7 +2,9 @@
 
 Guia digital de saúde comunitária para o bairro Auxiliadora, em Porto Alegre.
 
-Logo, ícones e QR Code ficam em `marca/`. Webapp pensado para celular, acessado por QR Code.
+Projeto da disciplina Trabalho Integrado em Saúde (PUCRS), de Letícia Postal Copat, Laura Kirch da Silveira e Melissa Hoerlle de Avila.
+
+Logo, ícones, QR Code e prints das telas ficam em `marca/`. Webapp pensado para celular, acessado por QR Code.
 
 **No ar:** https://luciocw.github.io/vizinhanca-saudavel/
 

@@ -71,7 +71,7 @@ export const Apoio = () => (
     <section>
       <h2>Sobre este guia</h2>
       <p className="muted">
-        O Vizinhança Saudável nasceu de um trabalho acadêmico de saúde coletiva. Ele partiu de conversas com moradores
+        O Vizinhança Saudável nasceu na disciplina Trabalho Integrado em Saúde, da PUCRS, feito por Letícia Postal Copat, Laura Kirch da Silveira e Melissa Hoerlle de Avila. Ele partiu de conversas com moradores
         do bairro, que falaram da falta de pracinhas perto de casa, de obesidade, de saúde mental e da pouca convivência
         entre vizinhos. O conteúdo é educativo e não substitui o atendimento de um profissional de saúde.
       </p>
