@@ -4,7 +4,7 @@ Guia digital de saúde comunitária para o bairro Auxiliadora, em Porto Alegre.
 
 Logo, ícones e QR Code ficam em `marca/`. Webapp pensado para celular, acessado por QR Code.
 
-**No ar:** https://luciocw.github.io/auxiliadora-saudavel/
+**No ar:** [ENDEREÇO DE PUBLICAÇÃO]
 
 ## Seções
 
@@ -34,7 +34,7 @@ Todo o texto fica em `src/content/`, em arquivos TypeScript tipados:
 | `apoio.ts` | Telefones, ideias de convivência e fontes |
 | `inicio.ts` | Desafio da semana e dica do dia |
 
-Cada push na `main` publica sozinho no GitHub Pages (`.github/workflows/deploy.yml`).
+Para publicar, conecta o repositório na Vercel (ou Netlify/Cloudflare Pages): framework Vite, build `npm run build`, pasta `dist`.
 
 ## Stack
 
