@@ -7,65 +7,64 @@
 <style>
   @page { size: 210mm 297mm; margin: 0; }
 
-  .form { padding: 13mm 15mm 11mm; gap: 5mm; font-size: 10.5pt; line-height: 1.35; }
+  /* Formulário em uma única folha A4 (só frente). */
+  .form { padding: 10mm 13mm 9mm; gap: 2.2mm; font-size: 9.6pt; line-height: 1.3; }
 
   .topo { display: flex; align-items: center; justify-content: space-between; gap: 6mm;
-          padding-bottom: 4mm; border-bottom: 0.6mm solid var(--brand); }
-  .topo .logo { height: 13mm; }
-  .topo .meta { text-align: right; font-size: 9pt; color: var(--muted); line-height: 1.35; }
+          padding-bottom: 2.5mm; border-bottom: 0.6mm solid var(--brand); }
+  .topo .logo { height: 10mm; }
+  .topo .meta { text-align: right; font-size: 8.5pt; color: var(--muted); line-height: 1.3; }
   .topo .meta strong { color: var(--ink); }
 
-  .titulo h1 { font-family: var(--font-display); font-weight: 800; font-size: 21pt;
+  .titulo h1 { font-family: var(--font-display); font-weight: 800; font-size: 16pt;
                line-height: 1.05; letter-spacing: -0.01em; }
-  .titulo p { font-size: 11pt; font-weight: 700; color: var(--muted); margin-top: 1.5mm; }
+  .titulo p { font-size: 10pt; font-weight: 700; color: var(--muted); margin-top: 1mm; }
 
-  .apresentacao { background: var(--sun-soft, #fbeab8); border-radius: 4mm; padding: 4mm 5mm; font-size: 10.5pt; }
-  .apresentacao strong { display: block; margin-bottom: 1mm; }
+  .apresentacao { background: #fbeab8; border-radius: 3mm; padding: 2.6mm 4mm; font-size: 9.4pt; }
 
-  .bloco h2 { display: flex; align-items: baseline; gap: 2.5mm; font-size: 12.5pt; font-weight: 700;
-              padding-bottom: 1.5mm; margin-bottom: 3mm; border-bottom: 0.3mm solid #dedbcf; }
-  .bloco h2 .tag { font-size: 8.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
-                   background: var(--ink); color: #fff; border-radius: 99px; padding: 0.6mm 2.6mm; }
-  .bloco h2 .obs { font-size: 9.5pt; font-weight: 400; color: var(--muted); }
+  .bloco h2 { display: flex; align-items: baseline; gap: 2.5mm; font-size: 11pt; font-weight: 700;
+              padding-bottom: 1mm; margin-bottom: 2mm; border-bottom: 0.3mm solid #dedbcf; }
+  .bloco h2 .tag { font-size: 7.8pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+                   background: var(--ink); color: #fff; border-radius: 99px; padding: 0.4mm 2.4mm; }
+  .bloco h2 .obs { font-size: 8.8pt; font-weight: 400; color: var(--muted); }
 
-  .campo { display: flex; align-items: flex-end; gap: 2mm; margin-bottom: 3.5mm; }
-  .campo .linha { flex: 1; border-bottom: 0.3mm solid var(--ink); height: 5mm; }
+  .linha-perfil { display: flex; flex-wrap: wrap; align-items: center; gap: 1.6mm 5mm; margin-bottom: 2mm; }
+  .campo { display: flex; align-items: flex-end; gap: 2mm; }
+  .campo .linha { flex: 1; border-bottom: 0.3mm solid var(--ink); height: 4.5mm; }
   .rotulo { font-weight: 700; }
 
-  .opcoes { display: flex; flex-wrap: wrap; gap: 1.6mm 6mm; margin: 1.5mm 0 3mm; }
-  .opcoes.col { flex-direction: column; }
-  .op { display: inline-flex; align-items: flex-start; gap: 2.2mm; }
-  .box { flex: none; width: 4.2mm; height: 4.2mm; border: 0.35mm solid var(--ink); border-radius: 1mm;
-         background: #fff; margin-top: 0.2mm; }
+  .opcoes { display: flex; flex-wrap: wrap; gap: 1.4mm 5.5mm; margin: 1.3mm 0 0; }
+  .opcoes.grade { display: grid; grid-template-columns: 1fr 1fr; gap: 1.4mm 5mm; }
+  .op { display: inline-flex; align-items: flex-start; gap: 1.8mm; }
+  .box { flex: none; width: 3.8mm; height: 3.8mm; border: 0.35mm solid var(--ink); border-radius: 0.9mm;
+         background: #fff; margin-top: 0.1mm; }
   .op b { font-weight: 700; }
 
-  .q { margin-bottom: 3.5mm; break-inside: avoid; }
-  .q .enunciado { display: flex; gap: 2.5mm; font-weight: 700; }
-  .q .n { flex: none; width: 6.5mm; height: 6.5mm; border-radius: 50%; background: var(--brand);
-          display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; font-size: 10.5pt;
-          margin-top: -0.6mm; }
-  .q .opcoes { margin-left: 9mm; }
+  .q { margin-bottom: 2.2mm; break-inside: avoid; }
+  .q:last-child { margin-bottom: 0; }
+  .q .enunciado { display: flex; gap: 2.2mm; font-weight: 700; }
+  .q .n { flex: none; width: 5.6mm; height: 5.6mm; border-radius: 50%; background: var(--brand);
+          display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; font-size: 9.5pt;
+          margin-top: -0.4mm; }
+  .q .opcoes { margin-left: 7.8mm; }
   .q .dica { font-weight: 400; color: var(--muted); }
 
-  .linhas { margin: 3mm 0 0 9mm; }
-  .linhas div { height: 8.5mm; border-bottom: 0.3mm solid #8d907f; }
+  .linhas { margin: 1mm 0 0 7.8mm; }
+  .linhas div { height: 7mm; border-bottom: 0.3mm solid #8d907f; }
 
-  .fim { display: flex; gap: 8mm; margin-top: 2mm; }
-  .fim .campo { flex: 1; margin: 0; }
+  .fim { display: flex; gap: 8mm; }
+  .fim .campo:last-child { flex: 1; }
 
-  .obrigado { margin-top: auto; display: flex; align-items: center; gap: 5mm; background: var(--ink); color: #fff;
-              border-radius: 4mm; padding: 4mm 5mm; }
-  .obrigado .qr { flex: none; width: 22mm; height: 22mm; background: #fff; border-radius: 2mm; padding: 0.6mm; }
+  .obrigado { margin-top: auto; display: flex; align-items: center; gap: 4mm; background: var(--ink); color: #fff;
+              border-radius: 3mm; padding: 2.6mm 4mm; }
+  .obrigado .qr { flex: none; width: 15mm; height: 15mm; background: #fff; border-radius: 1.5mm; padding: 0.4mm; }
   .obrigado .qr img { display: block; width: 100%; height: 100%; }
-  .obrigado p { font-weight: 700; font-size: 11pt; line-height: 1.3; }
-  .obrigado .url { color: var(--brand); font-size: 10pt; margin-top: 1mm; }
-
-  .pag { text-align: center; font-size: 8.5pt; color: var(--muted); }
+  .obrigado p { font-weight: 700; font-size: 9.6pt; line-height: 1.3; }
+  .obrigado .url { color: var(--brand); }
 </style>
 </head>
 <body>
 
-<!-- PÁGINA 1 -->
 <section class="page form" style="width:210mm;height:297mm">
   <header class="topo">
     <img class="logo" src="../vizinhanca-horizontal.svg" alt="Vizinhança Saudável">
@@ -78,21 +77,22 @@
   </div>
 
   <div class="apresentacao">
-    <strong>Olá!</strong>
-    Somos estudantes da PUCRS na área da Saúde e realizamos um levantamento sobre saúde e bem-estar no Bairro Auxiliadora. Sua opinião sobre os materiais e o guia digital apresentados hoje é fundamental para avaliarmos a relevância desta iniciativa para a comunidade.
+    <strong>Olá!</strong> Somos estudantes da PUCRS na área da Saúde e realizamos um levantamento sobre saúde e bem-estar no Bairro Auxiliadora. Sua opinião sobre os materiais e o guia digital apresentados hoje é fundamental para avaliarmos a relevância desta iniciativa para a comunidade.
   </div>
 
   <div class="bloco">
     <h2><span class="tag">Bloco 1</span> Identificação rápida <span class="obs">(opcional / perfil)</span></h2>
-    <div class="campo"><span class="rotulo">Nome ou iniciais:</span><span class="linha"></span></div>
-    <div class="rotulo">Vínculo com o Bairro Auxiliadora:</div>
-    <div class="opcoes">
+    <div class="linha-perfil">
+      <div class="campo" style="flex:1"><span class="rotulo">Nome ou iniciais:</span><span class="linha"></span></div>
+    </div>
+    <div class="linha-perfil">
+      <span class="rotulo">Vínculo com o Bairro Auxiliadora:</span>
       <span class="op"><span class="box"></span>Morador(a)</span>
       <span class="op"><span class="box"></span>Comerciante / Trabalhador(a) local</span>
       <span class="op"><span class="box"></span>Frequentador(a)</span>
     </div>
-    <div class="rotulo">Faixa etária:</div>
-    <div class="opcoes">
+    <div class="linha-perfil" style="margin-bottom:0">
+      <span class="rotulo">Faixa etária:</span>
       <span class="op"><span class="box"></span>18 a 29 anos</span>
       <span class="op"><span class="box"></span>30 a 49 anos</span>
       <span class="op"><span class="box"></span>50 a 59 anos</span>
@@ -105,7 +105,7 @@
 
     <div class="q">
       <div class="enunciado"><span class="n">1</span><span>Os problemas identificados pelo grupo (ansiedade/estresse, sedentarismo, obesidade e falta de praças próximas no miolo do bairro) refletem a realidade de quem vive ou circula no Auxiliadora?</span></div>
-      <div class="opcoes col">
+      <div class="opcoes">
         <span class="op"><span class="box"></span>Sim, refletem totalmente</span>
         <span class="op"><span class="box"></span>Refletem parcialmente</span>
         <span class="op"><span class="box"></span>Não refletem</span>
@@ -114,7 +114,7 @@
 
     <div class="q">
       <div class="enunciado"><span class="n">2</span><span>Como você avalia a clareza e a utilidade dos materiais apresentados hoje (Cartaz/Flyer informativo e o guia digital Vizinhança Saudável)?</span></div>
-      <div class="opcoes col">
+      <div class="opcoes grade">
         <span class="op"><span class="box"></span><span><b>Excelente</b> — muito claro, acessível e útil para o dia a dia</span></span>
         <span class="op"><span class="box"></span><span><b>Bom</b> — fácil de entender e relevante</span></span>
         <span class="op"><span class="box"></span><span><b>Regular</b> — precisa de melhorias na apresentação</span></span>
@@ -124,26 +124,17 @@
 
     <div class="q">
       <div class="enunciado"><span class="n">3</span><span>Quais recursos disponíveis no guia digital Vizinhança Saudável (luciocw.github.io/vizinhanca-saudavel) você considera mais úteis para a sua rotina ou da sua família? <span class="dica">(Pode marcar mais de uma opção)</span></span></div>
-      <div class="opcoes col">
+      <div class="opcoes grade">
         <span class="op"><span class="box"></span>Mapa das praças, pracinhas, feiras e serviços de saúde</span>
         <span class="op"><span class="box"></span>Rotas de caminhada de 15, 30 e 45 minutos pelo bairro</span>
         <span class="op"><span class="box"></span>Dicas práticas de alimentação saudável (Comida de verdade)</span>
         <span class="op"><span class="box"></span>Exercícios de respiração guiada para ansiedade e sono</span>
       </div>
     </div>
-  </div>
-
-  <p class="pag">continua no verso →</p>
-</section>
-
-<!-- PÁGINA 2 -->
-<section class="page form" style="width:210mm;height:297mm">
-  <div class="bloco">
-    <h2><span class="tag">Bloco 2</span> Avaliação do diagnóstico e da proposta <span class="obs">(continuação)</span></h2>
 
     <div class="q">
       <div class="enunciado"><span class="n">4</span><span>Você utilizaria ou recomendaria este guia digital e os materiais educativos para vizinhos, familiares ou frequentadores do bairro?</span></div>
-      <div class="opcoes col">
+      <div class="opcoes">
         <span class="op"><span class="box"></span>Sim, com certeza</span>
         <span class="op"><span class="box"></span>Talvez</span>
         <span class="op"><span class="box"></span>Não</span>
@@ -152,7 +143,7 @@
 
     <div class="q">
       <div class="enunciado"><span class="n">5</span><span>Você apoiaria ou participaria de futuras ações comunitárias gratuitas no bairro (como caminhadas coletivas, alongamentos em pátios escolares ou parcerias com academias locais)?</span></div>
-      <div class="opcoes col">
+      <div class="opcoes">
         <span class="op"><span class="box"></span>Sim, participaria e apoiaria</span>
         <span class="op"><span class="box"></span>Apoiaria a divulgação, mas não tenho disponibilidade para participar</span>
         <span class="op"><span class="box"></span>Não tenho interesse</span>
@@ -164,13 +155,13 @@
     <h2><span class="tag">Bloco 3</span> Escuta ativa</h2>
     <div class="q">
       <div class="enunciado"><span class="n">6</span><span>Qual sugestão, crítica ou comentário você gostaria de deixar para aprimorarmos esta proposta no Bairro Auxiliadora?</span></div>
-      <div class="linhas"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      <div class="linhas"><div></div><div></div><div></div><div></div></div>
     </div>
   </div>
 
   <div class="fim">
-    <div class="campo"><span class="rotulo">Data:</span><span class="linha" style="flex:none;width:8mm"></span>/<span class="linha" style="flex:none;width:8mm"></span>/ 2026</div>
-    <div class="campo" style="flex:2"><span class="rotulo">Assinatura (opcional):</span><span class="linha"></span></div>
+    <div class="campo"><span class="rotulo">Data:</span><span class="linha" style="flex:none;width:7mm"></span>/<span class="linha" style="flex:none;width:7mm"></span>/ 2026</div>
+    <div class="campo"><span class="rotulo">Assinatura (opcional):</span><span class="linha"></span></div>
   </div>
 
   <div class="obrigado">
