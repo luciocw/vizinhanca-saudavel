@@ -174,7 +174,7 @@ html, body {
 
 .a4 .qr-bloco { padding: 8mm; gap: 9mm; flex: 1; }
 .a4 .qr-bloco .qr { width: 60mm; height: 60mm; padding: 2mm; }
-.a4 .qr-bloco .cta { font-size: 27pt; }
+.a4 .qr-bloco .cta { font-size: 30pt; }
 .a4 .qr-bloco .ou { font-size: 14pt; margin-top: 6mm; }
 .a4 .qr-bloco .url { font-size: 16pt; margin-top: 1.5mm; }
 
