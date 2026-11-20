@@ -9,6 +9,7 @@ import path from 'node:path'
 const dir = path.dirname(fileURLToPath(import.meta.url))
 const pecas = [
   { html: 'cartaz-a4.html', pdf: 'cartaz-a4.pdf', previas: ['cartaz-a4'], w: 210, h: 297 },
+  { html: 'avaliacao-a4.html', pdf: 'avaliacao-devolutiva-a4.pdf', previas: ['avaliacao-pagina-1', 'avaliacao-pagina-2'], w: 210, h: 297 },
   { html: 'flyer-a5.html', pdf: 'flyer-a5-frente-e-verso.pdf', previas: ['flyer-a5-frente', 'flyer-a5-verso'], w: 148, h: 210 },
   // Mesmo flyer, 2 por folha A4 deitada (folha 1 = duas frentes, folha 2 = dois versos), com linha de corte no meio.
   { html: 'flyer-a5.html', pdf: 'flyer-a5-2-por-folha-a4.pdf', previas: ['flyer-a5-2-por-folha-frente', 'flyer-a5-2-por-folha-verso'], w: 297, h: 210, doisPorFolha: true },
