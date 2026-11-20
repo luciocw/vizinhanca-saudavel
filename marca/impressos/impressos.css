@@ -1,0 +1,300 @@
+/* Impressos do Vizinhança Saudável — mesma paleta e tipografia do app (src/index.css). */
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-weight: 400;
+  src: url('../../node_modules/@fontsource/atkinson-hyperlegible/files/atkinson-hyperlegible-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-weight: 700;
+  src: url('../../node_modules/@fontsource/atkinson-hyperlegible/files/atkinson-hyperlegible-latin-700-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-weight: 800;
+  src: url('../../node_modules/@fontsource/bricolage-grotesque/files/bricolage-grotesque-latin-800-normal.woff2') format('woff2');
+}
+
+:root {
+  --bg: #f6f5ef;
+  --surface: #ffffff;
+  --ink: #1d2318;
+  --muted: #4c5145;
+  --brand: #f2b705;
+  --brand-deep: #d9a404;
+  --green: #1e6a48;
+  --green-soft: #d8eadb;
+  --sky: #24668f;
+  --sky-soft: #d6e8f3;
+  --terra: #b13d22;
+  --terra-soft: #fbe0d6;
+  --plum: #6a4a9e;
+  --plum-soft: #e6ddf3;
+  --font-body: 'Atkinson Hyperlegible', system-ui, sans-serif;
+  --font-display: 'Bricolage Grotesque', 'Atkinson Hyperlegible', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.page {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  page-break-after: always;
+  break-after: page;
+}
+.page > * { flex-shrink: 0; }
+.page:last-child { page-break-after: auto; break-after: auto; }
+
+.a4 { width: 210mm; height: 297mm; padding: 12mm; gap: 7mm; }
+.a5 { width: 148mm; height: 210mm; padding: 9mm; gap: 4mm; }
+
+/* ---------- Hero amarelo ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--brand);
+  border-radius: 9mm;
+  color: var(--ink);
+}
+.hero > * { position: relative; }
+.hero .petals {
+  position: absolute;
+  pointer-events: none;
+}
+.hero .logo { display: block; }
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0.98;
+}
+.hero .sub { line-height: 1.35; }
+
+.a4 .hero { padding: 10mm 11mm 11mm; }
+.a4 .hero .petals { width: 135mm; right: -40mm; top: -38mm; }
+.a4 .hero .logo { height: 17mm; margin-bottom: 9mm; }
+.a4 .hero h1 { font-size: 54pt; max-width: 150mm; }
+.a4 .hero .sub { font-size: 17pt; margin-top: 5mm; max-width: 150mm; }
+
+.a5 .hero { padding: 7mm 7mm 7.5mm; }
+.a5 .hero .petals { width: 92mm; right: -28mm; top: -26mm; }
+.a5 .hero .logo { height: 11mm; margin-bottom: 5mm; }
+.a5 .hero h1 { font-size: 33pt; max-width: 105mm; }
+
+/* ---------- Pilares (cartaz) ---------- */
+.pilares {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5mm;
+}
+.pilar {
+  border-radius: 7mm;
+  padding: 6mm;
+  display: flex;
+  align-items: center;
+  gap: 4.5mm;
+}
+.pilar h2 {
+  font-size: 16.5pt;
+  font-weight: 700;
+  line-height: 1.12;
+}
+.pilar p { font-size: 12.5pt; margin-top: 1mm; line-height: 1.3; color: var(--muted); }
+
+.ico {
+  flex: none;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  border-radius: 30%;
+}
+.ico svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.pilar .ico { width: 14mm; height: 14mm; }
+.pilar .ico svg { width: 9mm; height: 9mm; }
+
+.t-green { background: var(--green-soft); }  .t-green .ico, .t-green .n { color: var(--green); }
+.t-sky   { background: var(--sky-soft); }    .t-sky .ico,   .t-sky .n   { color: var(--sky); }
+.t-terra { background: var(--terra-soft); }  .t-terra .ico, .t-terra .n { color: var(--terra); }
+.t-plum  { background: var(--plum-soft); }   .t-plum .ico,  .t-plum .n  { color: var(--plum); }
+
+/* ---------- Bloco QR ---------- */
+.qr-bloco {
+  background: var(--ink);
+  color: #fff;
+  border-radius: 9mm;
+  display: flex;
+  align-items: center;
+}
+.qr-bloco .qr {
+  flex: none;
+  background: #fff;
+  border-radius: 5mm;
+  display: grid;
+  place-items: center;
+}
+.qr-bloco .qr img { display: block; width: 100%; height: 100%; }
+.qr-bloco .cta {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+}
+.qr-bloco .cta .seta { color: var(--brand); }
+.qr-bloco .ou { color: #c9ccc0; line-height: 1.3; }
+.qr-bloco .url {
+  font-weight: 700;
+  color: var(--brand);
+  line-height: 1.2;
+}
+.qr-bloco .gratis {
+  display: inline-block;
+  background: var(--brand);
+  color: var(--ink);
+  font-weight: 700;
+  border-radius: 99px;
+}
+
+.a4 .qr-bloco { padding: 8mm; gap: 9mm; flex: 1; }
+.a4 .qr-bloco .qr { width: 60mm; height: 60mm; padding: 2mm; }
+.a4 .qr-bloco .cta { font-size: 27pt; }
+.a4 .qr-bloco .ou { font-size: 14pt; margin-top: 6mm; }
+.a4 .qr-bloco .url { font-size: 16pt; margin-top: 1.5mm; }
+
+.a5 .qr-bloco { padding: 6mm; gap: 6mm; }
+.url .nw { white-space: nowrap; }
+.a5 .qr-bloco .qr { width: 44mm; height: 44mm; padding: 1.2mm; border-radius: 3.5mm; }
+.a5 .qr-bloco .gratis { font-size: 10.5pt; padding: 1.2mm 3.5mm; margin-bottom: 3mm; }
+.a5 .qr-bloco .cta { font-size: 15pt; }
+.a5 .qr-bloco .url { font-size: 10.5pt; margin-top: 3mm; }
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3mm;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.rodape img { display: block; }
+.a4 .rodape { font-size: 12pt; }
+.a4 .rodape img { height: 6mm; }
+.a5 .rodape { font-size: 9pt; }
+.a5 .rodape img { height: 4.5mm; }
+
+/* ---------- Lista do flyer (frente) ---------- */
+.lista-titulo { font-size: 12.5pt; font-weight: 700; line-height: 1.25; }
+.lista { list-style: none; display: grid; gap: 2mm; }
+.lista li {
+  display: flex;
+  align-items: center;
+  gap: 3.5mm;
+  border-radius: 4.5mm;
+  padding: 2.3mm 3mm;
+  font-size: 12.5pt;
+  font-weight: 700;
+  line-height: 1.15;
+}
+.lista .ico { width: 9mm; height: 9mm; }
+.lista .ico svg { width: 6mm; height: 6mm; }
+
+/* ---------- Verso (mini-guia) ---------- */
+.verso-topo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4mm;
+}
+.verso-topo .kicker {
+  font-size: 10pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+.verso-topo h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22pt;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  margin-top: 1.5mm;
+}
+.verso-topo img { height: 13mm; flex: none; }
+
+.passos { display: flex; flex-direction: column; justify-content: space-between; gap: 2.5mm; flex: 1 1 auto; flex-shrink: 1; }
+.passo {
+  border-radius: 5mm;
+  padding: 3mm 4mm 3.2mm 3.5mm;
+  display: flex;
+  gap: 3.5mm;
+  align-items: flex-start;
+}
+.passo .n {
+  flex: none;
+  width: 9.5mm;
+  height: 9.5mm;
+  border-radius: 50%;
+  background: var(--surface);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 15pt;
+}
+.passo h2 { font-size: 12.5pt; font-weight: 700; line-height: 1.15; margin-bottom: 1.2mm; }
+.passo p { font-size: 9.5pt; line-height: 1.3; }
+.passo .tempos {
+  display: inline-flex;
+  gap: 1.5mm;
+  margin-top: 1.6mm;
+}
+.passo .tempos span {
+  background: var(--surface);
+  border-radius: 99px;
+  padding: 0.6mm 2.6mm;
+  font-size: 9.5pt;
+  font-weight: 700;
+}
+.passo .nota { font-size: 8.6pt; color: var(--muted); margin-top: 1mm; }
+
+.verso-cta {
+  display: flex;
+  align-items: center;
+  gap: 4.5mm;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 5mm;
+  padding: 4mm 5mm 4mm 4mm;
+}
+.verso-cta .qr {
+  flex: none;
+  width: 23mm;
+  height: 23mm;
+  background: #fff;
+  border-radius: 2.5mm;
+  padding: 0.6mm;
+}
+.verso-cta .qr img { display: block; width: 100%; height: 100%; }
+.verso-cta p { font-size: 11.5pt; font-weight: 700; line-height: 1.25; }
+.verso-cta .url { color: var(--brand); font-size: 10.5pt; margin-top: 1.4mm; }
