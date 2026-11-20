@@ -6,6 +6,7 @@ Peças para divulgar o app no bairro, com a mesma paleta, fontes e ícones do ap
 |---|---|
 | `cartaz-a4.pdf` | Cartaz A4 para murais (condomínios, farmácias, igrejas, comércio) |
 | `flyer-a5-frente-e-verso.pdf` | Flyer A5: página 1 = frente, página 2 = verso (mini-guia com 4 passos) |
+| `flyer-a5-2-por-folha-a4.pdf` | O mesmo flyer, 2 por folha A4 deitada (página 1 = duas frentes, página 2 = dois versos). Imprimir frente e verso **virando pela borda curta** e cortar na linha tracejada |
 | `previas/` | PNGs das peças, para conferir ou mandar no WhatsApp |
 
 **Imprimir:** tamanho real (100%), sem "ajustar à página". As margens internas têm 9 a 12 mm, então funciona em impressora comum, sem sangria. No flyer, frente e verso virando pela borda longa.
