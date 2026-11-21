@@ -1,6 +1,6 @@
 import { Icon } from '../components/Icon'
 import { PageHead } from '../components/PageHead'
-import { communityIdeas, healthServices, phones, sources } from '../content/apoio'
+import { communityIdeas, freeEvents, healthServices, phones, sources } from '../content/apoio'
 import { placeUrl } from '../lib/geo'
 import { go } from '../lib/router'
 
@@ -42,6 +42,26 @@ export const Apoio = () => (
                 <Icon name="pin" /> Ver no mapa
               </a>
             </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section>
+      <h2>Eventos de graça</h2>
+      <p className="muted">Onde ficar de olho na programação gratuita perto de casa:</p>
+      <div className="stack">
+        {freeEvents.map((e) => (
+          <div key={e.name} className="card">
+            <h3>{e.name}</h3>
+            <p className="small">{e.description}</p>
+            {e.link !== undefined && (
+              <div className="btn-row">
+                <a className="btn ghost" href={e.link} target="_blank" rel="noreferrer">
+                  <Icon name="external" /> Ver programação
+                </a>
+              </div>
+            )}
           </div>
         ))}
       </div>

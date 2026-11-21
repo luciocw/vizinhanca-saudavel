@@ -5,7 +5,29 @@ export const phones: readonly Contact[] = [
   { name: 'SAMU', phone: '192', description: 'Emergência médica: desmaio, dor no peito, falta de ar, acidente.' },
   { name: 'CVV', phone: '188', description: 'Apoio emocional e prevenção do suicídio. De graça, 24 horas, também por chat no site cvv.org.br.' },
   { name: 'Disque Saúde', phone: '136', description: 'Informações do Ministério da Saúde sobre doenças, vacinas e serviços do SUS.' },
-  { name: 'Prefeitura de Porto Alegre', phone: '156', description: 'Para avisar sobre praça mal cuidada, brinquedo quebrado, iluminação ou calçada ruim.' },
+  { name: 'Prefeitura de Porto Alegre', phone: '156', description: 'Para avisar sobre praça mal cuidada, brinquedo ou aparelho de ginástica quebrado, iluminação ou calçada ruim.' },
+]
+
+/** onde achar programação gratuita; não lista datas para não ficar desatualizado */
+export const freeEvents: readonly Contact[] = [
+  {
+    name: 'Feira Ecológica da Auxiliadora',
+    description: 'Toda terça de manhã, na Travessa dos Lanceiros Negros, entre a Mata Bacelar e a Coronel Bordini. Passear é de graça e sempre tem movimento.',
+  },
+  {
+    name: 'Esporte e lazer na cidade',
+    description: 'Notícias da prefeitura sobre atividades gratuitas em parques e praças da cidade.',
+    link: 'https://prefeitura.poa.br/Editoria/esporte-e-lazer',
+  },
+  {
+    name: 'Cultura na cidade',
+    description: 'Notícias da programação cultural da cidade, que tem muita coisa de graça.',
+    link: 'https://prefeitura.poa.br/Editoria/cultura',
+  },
+  {
+    name: 'Encontros do próprio bairro',
+    description: 'Igrejas, escolas e condomínios fazem encontros abertos. Vale olhar o mural da igreja da 24 de Outubro e o grupo do prédio.',
+  },
 ]
 
 export const healthServices = places.filter((p) => p.category === 'saude')
