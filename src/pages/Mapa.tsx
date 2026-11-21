@@ -3,12 +3,21 @@ import L from 'leaflet'
 import { CircleMarker, MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
 import { Icon } from '../components/Icon'
 import { PageHead } from '../components/PageHead'
-import { categoryMeta, mapCenter, mapInsight, places } from '../content/lugares'
+import { categoryMeta, categoryTips, mapCenter, mapInsight, places } from '../content/lugares'
 import { cssVars } from '../lib/css'
 import { haversine, placeUrl, type LatLng } from '../lib/geo'
 import type { Place, PlaceCategory } from '../types'
 
-const categories: readonly PlaceCategory[] = ['verde', 'pracinha', 'saude', 'feira', 'comunidade']
+const categories: readonly PlaceCategory[] = [
+  'verde',
+  'pracinha',
+  'ar-livre',
+  'academia',
+  'bike',
+  'saude',
+  'feira',
+  'comunidade',
+]
 
 const pinCache = new Map<string, L.DivIcon>()
 
@@ -86,7 +95,8 @@ export const Mapa = () => {
   return (
     <div className="page">
       <PageHead kicker="Mapa do bairro" title="Tem praça mais perto do que tu imagina" accent="var(--green)">
-        Áreas verdes, pracinhas para as crianças, a feira, serviços de saúde e pontos de encontro do bairro.
+        Áreas verdes, pracinhas, lugares para se exercitar, estações de bike, a feira, serviços de saúde e pontos de
+        encontro do bairro.
       </PageHead>
 
       <div className="chips" role="group" aria-label="Filtrar lugares">
@@ -147,6 +157,13 @@ export const Mapa = () => {
       </div>
       {geoMsg !== null && <p className="muted small" style={{ marginTop: -12 }}>{geoMsg}</p>}
 
+      {filter !== 'todos' && categoryTips[filter] !== undefined && (
+        <div className="card tinted" style={{ background: 'var(--sun-soft)' }}>
+          <h3>{categoryTips[filter].title}</h3>
+          <p>{categoryTips[filter].body}</p>
+        </div>
+      )}
+
       <section>
         <div className="section-title">
           <h2>Lugares</h2>
@@ -200,7 +217,8 @@ export const Mapa = () => {
       </div>
 
       <p className="footer-note">
-        Viu algo desatualizado, como um brinquedo quebrado ou uma praça nova? Avisa a prefeitura pelo 156.
+        Viu algo desatualizado, como um brinquedo ou aparelho de ginástica quebrado, ou uma praça nova? Avisa a
+        prefeitura pelo 156.
       </p>
     </div>
   )

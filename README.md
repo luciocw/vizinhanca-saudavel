@@ -10,11 +10,11 @@ Logo, ícones, QR Code e prints das telas ficam em `marca/`. Webapp pensado para
 
 ## Seções
 
-- **Mapa do bairro:** praças, pracinhas, academias ao ar livre, feiras e posto de saúde, com filtro e "mais perto de mim".
+- **Mapa do bairro:** praças, pracinhas, áreas de ginástica ao ar livre, academias, estações do Bike PoA, feira e serviços de saúde, com filtro e "mais perto de mim".
 - **Saúde em movimento:** rotas de caminhada de 15, 30 e 45 minutos e alongamentos com cronômetro.
 - **Comida de verdade:** os 10 passos do Guia Alimentar, prato saudável, leitura de rótulo e um joguinho de classificação.
 - **Mente sã:** respiração guiada (lenta, quadrada, 4-7-8), atenção plena, higiene do sono e quando buscar ajuda.
-- **Conecta-te ao bairro:** telefones úteis, atendimento no SUS e ideias para aproximar vizinhos.
+- **Conecta-te ao bairro:** telefones úteis, atendimento no SUS, onde achar eventos de graça e ideias para aproximar vizinhos.
 
 ## Rodar localmente
 

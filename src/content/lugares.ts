@@ -6,6 +6,9 @@ import type { Place, PlaceCategory, Tip, WalkRoute } from '../types'
 export const categoryMeta: Record<PlaceCategory, { readonly label: string; readonly color: string }> = {
   verde: { label: 'Praça e parque', color: '#2f7d4f' },
   pracinha: { label: 'Pracinha', color: '#c98a00' },
+  'ar-livre': { label: 'Ginástica ao ar livre', color: '#5f7d16' },
+  academia: { label: 'Academia', color: '#a3446e' },
+  bike: { label: 'Bike compartilhada', color: '#d0650c' },
   saude: { label: 'Saúde', color: '#c0452b' },
   feira: { label: 'Feira', color: '#7a4a78' },
   comunidade: { label: 'Comunidade', color: '#2f6584' },
@@ -185,6 +188,127 @@ export const places: readonly Place[] = [
     features: ['hospital privado'],
   },
 
+  // ---------- ginástica ao ar livre ----------
+  // OpenStreetMap (áreas "Área de Ginástica" dentro do Parcão), conferido em novembro de 2026.
+  {
+    id: 'ginastica-parcao-goethe',
+    name: 'Área de ginástica do Parcão (lado da Goethe)',
+    category: 'ar-livre',
+    lat: -30.02633,
+    lng: -51.19986,
+    bairro: 'Moinhos de Vento',
+    address: 'Dentro do Parque Moinhos de Vento, perto da Av. Goethe',
+    features: ['de graça', 'dentro do parque'],
+    note: 'Aparelho quebrado ou faltando? Pede o conserto à prefeitura pelo 156.',
+  },
+  {
+    id: 'ginastica-parcao-poty',
+    name: 'Área de ginástica do Parcão (lado da Poty Medeiros)',
+    category: 'ar-livre',
+    lat: -30.02545,
+    lng: -51.1988,
+    bairro: 'Moinhos de Vento',
+    address: 'Dentro do Parque Moinhos de Vento, perto da Rua Dr. Poty Medeiros',
+    features: ['de graça', 'dentro do parque'],
+    note: 'Aparelho quebrado ou faltando? Pede o conserto à prefeitura pelo 156.',
+  },
+
+  // ---------- academias ----------
+  // OpenStreetMap, conferido em novembro de 2026. Horário e preço mudam: confirma direto com a academia.
+  {
+    id: 'smart-fit-anita',
+    name: 'Smart Fit',
+    category: 'academia',
+    lat: -30.02663,
+    lng: -51.18974,
+    bairro: "Mont'Serrat",
+    address: 'Rua Anita Garibaldi',
+    features: ['academia particular'],
+  },
+  {
+    id: 'bodytech-silva-jardim',
+    name: 'Bodytech',
+    category: 'academia',
+    lat: -30.02536,
+    lng: -51.19056,
+    bairro: "Mont'Serrat",
+    address: 'Rua Silva Jardim, 375',
+    features: ['academia particular'],
+  },
+  {
+    id: 'bio-express-parcao',
+    name: 'Bio Express Parcão',
+    category: 'academia',
+    lat: -30.02488,
+    lng: -51.2016,
+    bairro: 'Moinhos de Vento',
+    address: 'Rua 24 de Outubro, 684',
+    features: ['academia particular'],
+  },
+  {
+    id: 'fit-academia',
+    name: 'Fit Academia',
+    category: 'academia',
+    lat: -30.02708,
+    lng: -51.20303,
+    bairro: 'Moinhos de Vento',
+    address: 'Rua Doutor Florêncio Ygartua, 64',
+    features: ['academia particular'],
+  },
+
+  // ---------- bike compartilhada ----------
+  // Estações do Bike PoA a até ~1 km da igreja, do feed oficial do sistema (GBFS), conferido em novembro de 2026.
+  {
+    id: 'bike-mata-bacelar',
+    name: 'Bike PoA: Mata Bacelar / Mariland',
+    category: 'bike',
+    lat: -30.02071,
+    lng: -51.19384,
+    bairro: 'Auxiliadora',
+    address: 'Rua Mata Bacelar, na lateral do nº 696 da Av. Mariland',
+    features: ['estação 96', '11 vagas'],
+  },
+  {
+    id: 'bike-bordini',
+    name: 'Bike PoA: Rua Bordini',
+    category: 'bike',
+    lat: -30.02288,
+    lng: -51.19693,
+    bairro: 'Auxiliadora',
+    address: 'Rua Coronel Bordini, em frente ao nº 555',
+    features: ['estação 68', '15 vagas'],
+  },
+  {
+    id: 'bike-atos-damaceno',
+    name: 'Bike PoA: Praça Atos Damaceno Ferreira',
+    category: 'bike',
+    lat: -30.0182,
+    lng: -51.19759,
+    bairro: 'Auxiliadora',
+    address: 'Rua Coronel Bordini, oposto ao nº 22',
+    features: ['estação 89', '11 vagas'],
+  },
+  {
+    id: 'bike-opus-one',
+    name: 'Bike PoA: Opus One',
+    category: 'bike',
+    lat: -30.02371,
+    lng: -51.1834,
+    bairro: 'Boa Vista',
+    address: 'Rua Campos Sales, ao lado do nº 222 da Av. Carlos Gomes',
+    features: ['estação 66', '11 vagas'],
+  },
+  {
+    id: 'bike-parcao',
+    name: 'Bike PoA: Parcão',
+    category: 'bike',
+    lat: -30.02471,
+    lng: -51.2009,
+    bairro: 'Moinhos de Vento',
+    address: 'Rua 24 de Outubro, em frente ao Parque Moinhos de Vento',
+    features: ['estação 40', '23 vagas'],
+  },
+
   // ---------- feira ----------
   {
     id: 'feira-auxiliadora',
@@ -284,6 +408,22 @@ export const feiraTips: readonly Tip[] = [
     body: 'Na primavera, por exemplo, é época de morango. Pergunta ao feirante o que está na safra.',
   },
 ]
+
+/** dica que aparece quando o filtro do mapa está numa dessas categorias */
+export const categoryTips: Partial<Record<PlaceCategory, Tip>> = {
+  bike: {
+    title: 'Bike e patinete',
+    body: 'As bikes do Bike PoA são liberadas pelo aplicativo do sistema, que mostra quantas estão livres em cada estação. Patinete elétrico compartilhado (como o da Whoosh) não tem estação fixa: ele fica espalhado pela rua e aparece no mapa do aplicativo da empresa.',
+  },
+  'ar-livre': {
+    title: 'Aparelho estragado?',
+    body: 'A manutenção das áreas de ginástica em parques e praças é da prefeitura. Liga ou manda mensagem para o 156 dizendo o lugar e qual aparelho precisa de conserto. Quanto mais vizinhos pedirem, mais rápido costuma sair.',
+  },
+  academia: {
+    title: 'Sobre as academias',
+    body: 'São academias particulares perto do bairro. Horário e preço mudam, então confirma direto com elas. Para treinar de graça, as áreas de ginástica do Parcão e as rotas de caminhada são boas opções.',
+  },
+}
 
 /** observação do mapa afetivo: falta de praças de proximidade no miolo do bairro */
 export const mapInsight =
